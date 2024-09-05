@@ -1,0 +1,18 @@
+config {
+    type: "table",
+    database: constants.pj_dwh,
+    columns: {
+        user_email: "The email of the user who has executed the query"
+    },
+    //Dummy test that will fail the assertion if the user is not defined
+    assertions: {
+      nonNull: ["user_email"]
+    }
+}
+
+SELECT
+  creation_time,
+  user_email,
+  total_bytes_billed,
+FROM
+  ${ref("raw__information_schema__jobs_by_folder")}

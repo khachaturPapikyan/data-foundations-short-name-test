@@ -1,0 +1,11 @@
+{
+  "defaultSchema": "dataform",
+  "assertionSchema": "dataform_assertions",
+  "warehouse": "bigquery",
+  "defaultDatabase": "pj-e5-data-1243-dev",
+  "defaultLocation": "EU",
+  "vars": {
+    "executionSetting": "dev",
+    "base_project_id": "pj-e5-data-1243"
+  }
+}

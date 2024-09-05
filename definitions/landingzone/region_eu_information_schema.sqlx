@@ -1,0 +1,11 @@
+config {
+    type: "declaration",
+    database: constants.project_id,
+    schema: "region-eu.INFORMATION_SCHEMA",
+    name: "JOBS_BY_USER",
+    description: "It contains system-defined views that provide metadata information about your BigQuery objects",
+}
+
+  -- SOURCE NAMING CONVENTION
+  -- <loader>__<database>__<schema>
+  -- e.g. fivetran__sales_db__dbo

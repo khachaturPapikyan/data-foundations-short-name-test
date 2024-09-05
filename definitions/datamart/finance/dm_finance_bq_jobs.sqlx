@@ -1,0 +1,10 @@
+config {
+    type: "table",
+    database: constants.pj_dm,
+    description: "Info for the finance team about bq jobs.",
+}
+
+SELECT
+  *
+FROM
+  ${ref("dwh__fact__bigquery_job")}

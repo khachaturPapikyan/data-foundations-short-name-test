@@ -1,0 +1,15 @@
+config {
+    type: "table",
+    database: constants.project_id,
+    description: "This table contains information about the jobs ran in the folder"
+}
+
+SELECT
+  "INFORMATION_SCHEMA" AS _meta_source_name,
+  "JOBS_BY_USER" AS _meta_table_name,
+  job_id AS _meta_pk,
+  CURRENT_TIMESTAMP() AS _meta_ts_extraction,
+  creation_time AS _meta_ts_source,
+  *
+FROM
+  ${ref("JOBS_BY_USER")}
